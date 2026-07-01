@@ -1,0 +1,39 @@
+name: "🐛 Zgłoś błąd lub sugestię"
+description: "Coś nie działa w API albo masz pomysł na nową funkcję?"
+title: "[BUG/SUGESTIA]: "
+labels: ["sugestia", "do weryfikacji"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Coś poszło nie tak lub masz świetny pomysł?
+        Opisz nam problem z API, dokumentacją lub stroną www, a chętnie się tym zajmiemy!
+
+  - type: dropdown
+    id: typ_zgloszenia
+    attributes:
+      label: "1. Typ zgłoszenia:"
+      options:
+        - "Błąd w działaniu API (Bug)"
+        - "Błąd w treści żartu (literówka/duplikat)"
+        - "Sugestia nowej funkcji / Ulepszenie"
+        - "Inne"
+    validations:
+      required: true
+
+  - type: textarea
+    id: opis
+    attributes:
+      label: "2. Szczegółowy opis:"
+      description: "Napisz co dokładnie nie działa, jak wywołać błąd (np. konkretny endpoint) lub co chcesz ulepszyć."
+      placeholder: "Np. API zwraca czasami kod 500 zamiast żartu..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: warunki_bledu
+    attributes:
+      label: "3. Sprawdzenie:"
+      options:
+        - label: "Potwierdzam, że opisany problem dotyczy projektu SucharyAPI."
+          required: true
