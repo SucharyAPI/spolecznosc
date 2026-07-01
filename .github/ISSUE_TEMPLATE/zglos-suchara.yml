@@ -1,0 +1,52 @@
+name: "✍️ Zgłoś nowy suchar"
+description: "Zaproponuj żart do bazy żartów SucharyAPI"
+title: "[PROPOZYCJA]: "
+labels: ["propozycja", "do weryfikacji"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Dzięki, że współtworzysz SucharyAPI! 
+        Wypełnij poniższe pola, a my zweryfikujemy Twój żart i dodamy go do oficjalnej bazy.
+
+  - type: dropdown
+    id: kategoria
+    attributes:
+      label: "1. Wybierz kategorię żartu:"
+      description: "Wybierz grupę, do której najlepiej pasuje Twój suchar."
+      options:
+        - "Informatyczne"
+        - "Dwuznaczne"
+        - "Szkolne"
+        - "Suchary"
+        - "Wulgarne"
+        - "Czarny humor"
+        - "Inne"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tresc_zartu
+    attributes:
+      label: "2. Treść żartu:"
+      description: "Wpisz tutaj całą treść swojego suchara. Postaraj się zadbać o polskie znaki."
+      placeholder: "Przychodzi baba do lekarza, a lekarz też baba..."
+    validations:
+      required: true
+
+  - type: input
+    id: autor_suchara
+    attributes:
+      label: "3. Twój podpis (Opcjonalnie):"
+      description: "Jak chcesz być podpisany w bazie danych jako autor zgłoszenia? (np. Twój nick z GitHuba lub imię)"
+      placeholder: "np. JanuszKodziarz"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: warunki
+    attributes:
+      label: "4. Weryfikacja prawna i bezpieczeństwo:"
+      options:
+        - label: "Potwierdzam, że treść nie nawołuje do nienawiści, nie propaguje systemów totalitarnych oraz jest zgodna z prawem RP i Regulaminem GitHub (Community Guidelines)."
+          required: true
