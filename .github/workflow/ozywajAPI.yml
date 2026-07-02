@@ -1,0 +1,13 @@
+name: Utrzymaj SucharyAPI przy życiu
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping SucharyAPI
+        run: curl -s https://sucharyapi.onrender.com/health
