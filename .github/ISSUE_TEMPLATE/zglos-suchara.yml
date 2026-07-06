@@ -1,6 +1,6 @@
 name: "✍️ Zgłoś nowy suchar"
 description: "Zaproponuj żart do bazy żartów SucharyAPI"
-title: "[PROPOZYCJA]: "
+title: "[PROPOZYCJA SUCHARA]"
 labels: ["propozycja", "do weryfikacji"]
 body:
   - type: markdown
